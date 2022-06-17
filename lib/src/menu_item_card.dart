@@ -48,7 +48,7 @@ class _MenuItemCardState extends State<MenuItemCard> {
   }
 
   Widget _descriptionArea() {
-    // var f = NumberFormat("###.0#", "tr_TR");
+    var f = NumberFormat.currency(locale: "tr_TR", symbol: "₺");
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
@@ -71,7 +71,7 @@ class _MenuItemCardState extends State<MenuItemCard> {
               flex: 1,
               child: Center(
                   child: Text(
-                "${price.toString()} $currencySymbol",
+                f.format(price),
                 style: TextStyle(
                     fontSize: priceFontSize,
                     fontWeight: FontWeight.bold,

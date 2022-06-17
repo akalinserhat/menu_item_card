@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   "https://media.istockphoto.com/photos/turkish-food-iskender-dner-kebab-with-yoghurt-on-a-plate-picture-id1048799978?s=612x612",
               title: "Yaprak Döner",
               description: "%100 dana eti - tereyağı - kandıra yoğurdu",
-              price: 60.0,
+              price: 59.99,
               currencySymbol: "₺",
               onChangePiece: (value) {},
             ),
