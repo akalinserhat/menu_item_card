@@ -10,7 +10,7 @@ class MenuItemCard extends StatefulWidget {
   final Function(int value) onChangePiece;
   const MenuItemCard(
       {Key? key,
-      this.width = 380,
+      this.width = 390,
       this.imageURL,
       required this.title,
       required this.description,
@@ -25,15 +25,16 @@ class MenuItemCard extends StatefulWidget {
 
 class _MenuItemCardState extends State<MenuItemCard> {
   double get width => widget.width;
-  double get height => widget.width / 3;
+  double get height => widget.width / 4;
   String? get imageURL => widget.imageURL;
   String get title => widget.title;
   String get description => widget.description;
   double get price => widget.price;
   String get currencySymbol => widget.currencySymbol;
-  double get titleFontSize => widget.width / 19;
-  double get descriptionFontSize => widget.width / 25;
-  double get priceFontSize => widget.width / 17;
+  double get titleFontSize => widget.width / 20;
+  double get descriptionFontSize => widget.width / 32;
+  double get priceFontSize => widget.width / 18;
+  double get pieceIndicatorHeight => widget.width / 4.5;
   Function(int value) get onChangePiece => widget.onChangePiece;
 
   Widget _imageArea() {
@@ -83,9 +84,9 @@ class _MenuItemCardState extends State<MenuItemCard> {
   }
 
   Widget _peiceIndicatorArea() {
-    return const Padding(
-      padding: EdgeInsets.all(10.0),
-      child: PeiceIndicator(height: 10),
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: PeiceIndicator(height: pieceIndicatorHeight),
     );
   }
 
